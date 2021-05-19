@@ -1,0 +1,20 @@
+.portfolio__resume{
+    background: rgba(0,0,0,0.7);
+    display:inline;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #626262;
+    padding: 10px;
+    width: 50%;
+    height: 90%;
+  
+  }
+  .resume__exit{
+   display:flex; 
+   font-size: 30px;
+  padding-right: 10px;
+  padding-top: 10px;
+  height:20px;
+  }
