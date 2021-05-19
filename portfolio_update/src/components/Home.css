@@ -1,7 +1,7 @@
 
   .portfolio__container{
     background: rgba(0,0,0,0.7);
-    display:flex;
+    display:inline;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -15,7 +15,7 @@
   }
 
   .portfolio__links > a{
-    display:flex;
+    display:inline;
     color:white;
     font-size: 48px;
     padding: 10px;
@@ -42,7 +42,7 @@
   }
   .portfolio__resumeIcon{
     display:flex;
-    position:absolute;
+    position:relative;
     color:white;
     font-size: 48px;
     padding: 10px 3px 10px 18px;
@@ -65,7 +65,7 @@
   }
   
   .portfolio__container > p{
-  margin-top: 100px;
+  margin-top: 30px;
   margin-left: 50px;
   margin-right: 50px;
   font-size: 13px;
