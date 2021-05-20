@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/Home";
+import RecipeReviewCard from "./components/Home";
 import Particles from 'react-particles-js';
 import "./components/ParticlesContainer.css"
+import COLOR_IMAGE1 from './colorMe1.jpg'
 
 function App() {
   return (
@@ -20,19 +22,19 @@ function App() {
           }
         },
         color: {
-          value: "#ffffff"
+          value: "#5adbd5"
         },
         shape: {
           type: "circle",
           stroke: {
             width: 0,
-            color: "#000000"
+            color: "#5adbd5"
           },
           polygon: {
             nb_sides: 5
           },
           image: {
-            src: "img/github.svg",
+            src: "",
             width: 100,
             height: 100
           }
@@ -100,7 +102,7 @@ function App() {
           },
           bubble: {
             distance: 100,
-            size: 15,
+            size: 30,
             duration: 2,
             opacity: 4,
             speed: 1
@@ -128,8 +130,10 @@ function App() {
     }}
       >
     </Particles>
-      
-        <Route exact path="/"><Home/></Route>
+    <Route exact path="/"><RecipeReviewCard/></Route>
+
+        {/* <Route exact path="/"><Home/></Route> */}
+        
       
     </Router>
   );

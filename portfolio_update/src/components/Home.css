@@ -13,6 +13,12 @@
     color:white;
     overflow:hidden
   }
+  .portfolio__grid{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   .portfolio__links > a{
     display:inline;
