@@ -45,10 +45,11 @@ import PictureAsPdfOutlinedIcon from "@material-ui/icons/PictureAsPdfOutlined";
 import Grid from "@material-ui/core/Grid";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
-
+import Resume from './Resume'
 import COLOR_IMAGE1 from "../colorMe1.jpg";
 
 export default function RecipeReviewCard() {
+  const [displayAttribute,setDisplayAttribute] = useState(true)
   const y = 50;
   const x = 50;
   const theme = useTheme();
@@ -97,9 +98,25 @@ export default function RecipeReviewCard() {
   const grayPhoto = (e) => {
     e.target.style.filter = "grayscale(100%)";
   };
+
+  const renderResume=(e) => {
+    if(displayAttribute===true){ 
+      setDisplayAttribute(false)
+      document.getElementById('resume__grid').style.display = "inline"
+      document.getElementById('main__grid').style.display = "none";
+  }   
+  }
+  const exitResume=(e) => {
+    if(displayAttribute===false){ 
+      setDisplayAttribute(true)
+      document.getElementById('main__grid').style.display = "inline"
+      document.getElementById('resume__grid').style.display = "none"
+  }   
+  }
+
   return (
     <Grid container justify="center" alignItems="center">
-      <Card className={classes.root}>
+      <Card className={classes.root} id="main__grid">
         <Grid item>
           <CardMedia className={classes.media} title="Picture">
             <img
@@ -158,10 +175,13 @@ export default function RecipeReviewCard() {
             </a>
           </IconButton>
           <IconButton aria-label="Resume.pdf" >
-            <PictureAsPdfOutlinedIcon style={{ fontSize: "40px",color: "white" }} />
+            <PictureAsPdfOutlinedIcon style={{ fontSize: "40px",color: "white" }}  onClick={(e)=>renderResume(e)}/>
           </IconButton>
         </CardActions>
       </Card>
+      <Grid item style={{display:"none"}} id="resume__grid">
+        <Resume  exitResume={exitResume}/>
+      </Grid>
     </Grid>
   );
 }

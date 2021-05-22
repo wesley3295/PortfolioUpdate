@@ -1,21 +1,16 @@
 .portfolio__resume{
   background: rgba(0,0,0,0.7);
-    /* display:inline; */
+    /* display:none; */
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid #626262;
-    padding: 10px;
     width: 600px;
-    height: 95%;
+    height: 90%;
     color:white;
     overflow:hidden
   }
   .resume__exit{
-   display:flex; 
-   font-size: 30px;
-  padding-left: 47%;
-  padding-bottom: 15px;
-  height:20px;
+    color: "white";
   }
